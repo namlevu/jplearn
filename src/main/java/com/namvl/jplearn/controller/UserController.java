@@ -9,8 +9,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class UserController {
+
+  /**
+   * Show all user
+   * @param model
+   * @return
+   */
   @RequestMapping("/users")
-  public String allUsers(Model model) {
-    return "userlist";
+  public String users(Model model) {
+    return "users";
+  }
+
+  @RequestMapping("/addUser")
+  public String addUser() {
+    return "addUser";
+  }
+
+  @RequestMapping("/addUserResult")
+  public String addUserResult() {
+    return "addUserResult";
   }
 }
